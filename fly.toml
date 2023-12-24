@@ -43,9 +43,6 @@ console_command = "/rails/bin/rails console"
   guest_path = "/rails/public"
   url_prefix = "/"
 
-[env]
-  DATABASE_URL = "sqlite3:///mnt/volume/production.sqlite3"
-
 [mounts]
   source="embs_blogger"
-  destination="/mnt/volume"
+  destination="/data"
