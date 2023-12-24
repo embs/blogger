@@ -1,8 +1,12 @@
 <h1>Articles</h1>
 
+Our blog has <%= Article.public_count %> articles and counting!
+
 <% if @articles.any? %>
   <ul>
     <% @articles.each do |article| %>
+      <% next if article.archived? %>
+
       <li>
         <%= link_to article.title, article %>
       </li>
